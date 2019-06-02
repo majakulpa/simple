@@ -10,7 +10,7 @@
         //check if any of field is empty
         if (empty($mailuid) || empty($password)) {
 
-            header("Location: ../project.php?error=emptyfields");    //send user back to main page
+            header("Location: ../login.php?error=emptyfields");    //send user back to main page
             exit();
 
         }
@@ -21,7 +21,7 @@
             $stmt = mysqli_stmt_init($conn);
             if (!mysqli_stmt_prepare($stmt, $sql)) {
 
-                header("Location: ../project.php?error=sqlerror");    
+                header("Location: ../login.php?error=sqlerror");    
                 exit();
 
             }
@@ -39,7 +39,7 @@
 
                     if ($pwdCheck == false) {
 
-                        header("Location: ../project.php?error=wrongpwd");    
+                        header("Location: ../login.php?error=wrongpwd");    
                         exit();
 
                     }
@@ -50,14 +50,14 @@
                         $_SESSION['userId'] = $row['idUsers'];
                         $_SESSION['userUid'] = $row['uidUsers'];
 
-                        header("Location: ../project.php?login=success");    
+                        header("Location: ../draggable/index.html?login=success");    
                         exit();
 
                     }
 
                     else {
 
-                        header("Location: ../project.php?error=wrongpwd");    
+                        header("Location: ../login.php?error=wrongpwd");    
                         exit();
 
                     }
@@ -66,7 +66,7 @@
 
                 else {
 
-                    header("Location: ../project.php?error=nouser");    
+                    header("Location: ../login.php?error=nouser");    
                     exit();
 
                 }

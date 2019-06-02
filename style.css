@@ -4,12 +4,12 @@
 
 .navbar {
   width: 100vw;
-  font-weight: 100;
+  font-weight: 200;
   background-color: rgb(53, 53, 182);
   color: #fff;
   position: relative;
   padding: 1rem;
-  z-index: 2000;
+  z-index: 500;
 }
 
 .form-inline {
@@ -72,7 +72,7 @@ body {
 .small-form > h1 {
   letter-spacing: 0.8rem;
   text-transform: uppercase;
-  font-weight: 200;
+  font-weight: 300;
   color: #227473;
   margin-bottom: 2rem;
 }
@@ -129,7 +129,7 @@ body {
 
 #lead-main {
   font-size: 1.7rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 1rem;
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -140,7 +140,7 @@ body {
 
 #jumbotron-btn {
   margin-top: 1rem;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 1.6rem;
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -166,7 +166,7 @@ body {
   text-align: center;
   margin-top: 3rem;
   letter-spacing: 0.8rem;
-  font-weight: 200;
+  font-weight: 300;
   color: #227473;
   background-image: linear-gradient(to left, #17a2b8, #227473);
   -webkit-background-clip: text;
@@ -181,7 +181,7 @@ body {
 .lead-fluid {
   font-size: 1.5rem;
   color: #227473;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.2rem;
 }
 
@@ -377,7 +377,7 @@ footer > p:hover {
 }
 
 .heading-tertiary {
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.8rem;
   margin-top: 3rem;
   margin-bottom: 2rem;
@@ -387,7 +387,7 @@ footer > p:hover {
   color: transparent;
 }
 .feature-box__text {
-  font-weight: 100;
+  font-weight: 400;
 }
 
 #second-fluid {
@@ -404,7 +404,7 @@ footer > p:hover {
   margin-top: 3rem;
   padding: 0.8rem 2rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-  font-weight: 200;
+  font-weight: 400;
   font-size: 1.6rem;
   cursor: pointer;
 }

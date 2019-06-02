@@ -2,8 +2,8 @@
     require "header.php";
 ?>
 
-
-    <main id="mainParagraph">
+<div class="big-form">
+    <main class="small-form">
         <h1>Signup</h1>
 
         <?php
@@ -12,46 +12,77 @@
 
                 if ($_GET['error'] == "emptyfields") {
 
-                    echo '<p class="signuperror">Fill in all fields</p>';
+                    echo "<div class='alert alert-danger' role='alert'>
+                            Fill in all fields
+                        </div>";
                 }
                 else if ($_GET['error'] == "invaliduidmail") {
 
-                    echo '<p class="signuperror">Invalid username and email</p>';
+                    echo "<div class='alert alert-danger' role='alert'>
+                            Invalid username and email
+                        </div>";
+            
                 }
                 else if ($_GET['error'] == "invaliduid") {
 
-                    echo '<p class="signuperror">Invalid username</p>';
+                    echo "<div class='alert alert-danger' role='alert'>
+                            Invalid username
+                        </div>";
                 }
                 else if ($_GET['error'] == "invalidmail") {
 
-                    echo '<p class="signuperror">Invalid email</p>';
+                    echo "<div class='alert alert-danger' role='alert'>
+                            Invalid email
+                        </div>";
                 }
                 else if ($_GET['error'] == "passwordcheck") {
 
-                    echo '<p class="signuperror">Your password do not match</p>';
+                    echo "<div class='alert alert-danger' role='alert'>
+                            Your password do not match
+                        </div>";
                 }
                 else if ($_GET['error'] == "usertaken") {
 
-                    echo '<p class="signuperror">This username is already taken</p>';
+                    echo "<div class='alert alert-danger' role='alert'>
+                            This username is already taken
+                        </div>";
                 }
 
             }
 
             else if ($_GET["signup"] == "success") {
 
-                echo '<p class="signuperror">Signup successful!</p>';
+                echo "<div class='alert alert-success' role='alert'>
+                        Signup successful!
+                    </div>";
             }
 
         ?>
 
-        <form action="includes/signup.inc.php" method="post">
-            <input type="text" name="uid" placeholder="Username">
-            <input type="text" name="mail" placeholder="Email">
-            <input type="password" name="pwd" placeholder="Password">
-            <input type="password" name="pwd-repeat" placeholder="Repeat password">
-            <button type="submit" name="signup-submit">Signup</button>
+        <form action="inc/signup.inc.php" method="post">
+        <div class="form-group">
+            <label for="user">Username</label>
+            <input type="text" name="uid" class="form-control" id="user"  placeholder="Username">   
+        </div>
+        <div class="form-group">
+            <label for="emailsignup">Email address</label>
+            <input type="email" name="mail" class="form-control" id="emailsignup" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="pwdsignup">Password</label>
+            <input type="password" name="pwd" class="form-control" id="pwdsignup" placeholder="Password">
+        </div>
+        <div class="form-group">
+            <label for="pwdrepsignup">Repeat password</label>
+            <input type="password" name="pwd-repeat" class="form-control" id="pwdrepsignup" placeholder="Repeat password">
+        </div>
+        <button type="submit" name="signup-submit" class="btn btn-info btn-lg" id="submit-btn">Submit</button>
         </form>
+
+    
     </main>
+</div>
 
 <?php
     
